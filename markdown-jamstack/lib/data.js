@@ -1,7 +1,15 @@
 export const blogPosts = [
     {
-        title: '',
+        title: 'One',
         date: new Date(), 
-        content: ''
+        slug: 'my-first',
+        content: 'loremipsumaosidjaoi sdoiajsd oaisdñj'
+    },
+    {
+        title: 'Two',
+        date: new Date(), 
+        slug: 'my-second',
+        content: 'Prueba 2'
     }
 ]
+

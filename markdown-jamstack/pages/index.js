@@ -1,6 +1,6 @@
 import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import Link from 'next/link';
+import { blogPosts } from '../lib/data'
 
 export default function Home() {
   return (
@@ -16,6 +16,18 @@ export default function Home() {
          My blog
         </h1>
       </main>
+      <div>
+        {blogPosts.map((item) => (
+          <div key={item.slug}>
+          <Link href={`/blog/${item.slug}`}>
+          <a><div>{item.title}</div></a>
+          </Link>
+          <div>{item.date.toString()}</div>
+           <div>{item.content}</div>
+          </div>
+        ))
+        }
+      </div>
 
     </div>
   )
